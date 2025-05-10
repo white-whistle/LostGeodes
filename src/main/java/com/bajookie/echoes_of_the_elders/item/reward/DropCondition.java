@@ -92,11 +92,7 @@ public class DropCondition {
 
             @Override
             public boolean canDrop(IRaidReward.RaidRewardDropContext ctx) {
-                var level = ctx.level();
-                var min = config.min();
-                var max = config.max();
-
-                return level >= min && level < max;
+                return true;
             }
 
             @Override

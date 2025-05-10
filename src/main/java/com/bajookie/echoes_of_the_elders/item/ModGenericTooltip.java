@@ -3,7 +3,6 @@ package com.bajookie.echoes_of_the_elders.item;
 import com.bajookie.echoes_of_the_elders.item.ability.Ability;
 import com.bajookie.echoes_of_the_elders.item.ability.TooltipHelper;
 import com.bajookie.echoes_of_the_elders.item.custom.IArtifact;
-import com.bajookie.echoes_of_the_elders.item.reward.DropCondition;
 import com.bajookie.echoes_of_the_elders.system.ItemStack.Soulbound;
 import com.bajookie.echoes_of_the_elders.system.ItemStack.StackLevel;
 import com.bajookie.echoes_of_the_elders.system.ItemStack.Tier;
@@ -86,10 +85,6 @@ public class ModGenericTooltip {
             tryPad.run();
             var name = Soulbound.getName(stack);
             tooltip.add((TextUtil.translatable("tooltip.echoes_of_the_elders.soulbound", new TextArgs().put("player", name))));
-        }
-
-        if (isShifting) {
-            DropCondition.appendTooltip(stack, world, tooltip, context);
         }
     }
 }

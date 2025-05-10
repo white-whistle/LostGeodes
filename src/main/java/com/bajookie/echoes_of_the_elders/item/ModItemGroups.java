@@ -22,6 +22,8 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.echoes_of_the_elders")).icon(() -> new ItemStack(ModBlocks.ARTIFACT_GEODE)).entries((displayContext, entries) -> {
                 entries.add(ModItems.EXPLORER_FRUIT);
                 entries.add(ModBlocks.EXPLORER_FRUIT_BLOCK);
+                entries.add(ModBlocks.ARTIFACT_GEODE);
+                entries.add(ModItems.ARTIFACT_GEODE);
                 entries.add(ModItems.GALE_ARROW);
             }).build());
 
@@ -38,7 +40,7 @@ public class ModItemGroups {
     }
 
     public static final ItemGroup MOD_ARTIFACT_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "mod_artifact_group"),
-            FabricItemGroup.builder().displayName(Text.translatable("artifact-group.echoes_of_the_elders")).icon(() -> new ItemStack(ModItems.VITALITY_PUMP)).entries((displayContext, entries) -> {
+            FabricItemGroup.builder().displayName(Text.translatable("artifact-group.echoes_of_the_elders")).icon(() -> new ItemStack(ModItems.ARTIFACT_GEODE)).entries((displayContext, entries) -> {
                 addStackedVariants(entries, ModItems.RADIANT_LOTUS);
                 addStackedVariants(entries, ModItems.VITALITY_PUMP);
                 addStackedVariants(entries, ModItems.PORTAL_RING);
@@ -53,7 +55,6 @@ public class ModItemGroups {
                 addStackedVariants(entries, ModItems.REALITY_PICK);
                 addStackedVariants(entries, ModItems.GODSLAYER);
                 addStackedVariants(entries, ModItems.GUNHEELS);
-                // addStackedVariants(entries, ModItems.STAT_FRUIT_HP);
                 addStackedVariants(entries, ModItems.TIME_GLYPH);
                 addStackedVariants(entries, ModItems.WTF_TOKEN);
                 addStackedVariants(entries, ModItems.SPARKING_MITTS);
@@ -63,21 +64,18 @@ public class ModItemGroups {
                 addStackedVariants(entries, ModItems.ECHOING_SWORD);
                 addStackedVariants(entries, ModItems.ORB_OF_ANNIHILATION);
                 addStackedVariants(entries, ModItems.STARFALL_BOW);
-                // addStackedVariants(entries, ModItems.EARTH_SPIKE_RELIC);
                 addStackedVariants(entries, ModItems.ICICLE_RELIC);
                 entries.add(ModItems.MAGIC_HAMMER);
                 entries.add(ModItems.HEAT_STONE);
                 entries.add(ModItems.STEPPING_STONE);
                 addStackedVariants(entries, ModItems.ARTIFACT_HAMMER);
                 addStackedVariants(entries, ModItems.WTF_HAMMER);
-                // addStackedVariants(entries, ModItems.ANCIENT_MINIGUN);
                 addStackedVariants(entries, ModItems.VOID_RAY);
                 addStackedVariants(entries, ModItems.MASK_OF_DAWN);
                 addStackedVariants(entries, ModItems.COWPLATE);
                 addStackedVariants(entries, ModItems.HARELEAP_STRIDERS);
                 addStackedVariants(entries, ModItems.ATLAS_GREAVES);
                 addStackedVariants(entries, ModItems.SPIRAL_SWORD);
-                // addStackedVariants(entries, ModItems.MONOLOOK_SPAWN);
             }).build());
 
     public static void registerGroups() {

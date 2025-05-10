@@ -7,7 +7,7 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class ModOreGeneration {
     public static void generateOres(){
-        //BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-        //        GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.RELIC_CONTAINER_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+               GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ARTIFACT_GEODE_ORE_PLACED_KEY);
     }
 }

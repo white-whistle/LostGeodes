@@ -20,6 +20,7 @@ public class ModItems {
 
     public static final ToolMaterial ARTIFACT_BASE_MATERIAL = ToolMaterialBuilder.copyOf(ToolMaterials.IRON).repairIngredient(null).durability(0);
 
+    public static final Item ARTIFACT_GEODE = registerItem("artifact_geode", new ArtifactGeode(new FabricItemSettings()));
     public static final Item RADIANT_LOTUS = registerItem("radiant_lotus_item", new RadiantLotusItem());
     public static final Item EXPLORER_FRUIT = registerItem("explorers_fruit", new Item(new FabricItemSettings().food(ModFoodComponents.EXPLORERS_FRUIT).maxCount(16)));
     public static final Item MIDAS_HAMMER = registerItem("midas_hammer", new MidasHammerItem());

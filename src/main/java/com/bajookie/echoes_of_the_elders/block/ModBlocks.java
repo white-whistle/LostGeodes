@@ -17,8 +17,8 @@ public class ModBlocks {
     public static final Block EXPLORER_FRUIT_BLOCK = registerBlock("explorers_fruit_block", new FlowerBlock(StatusEffects.GLOWING, 1, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_EXPLORER_FRUIT_BLOCK = Registry.register(Registries.BLOCK, new Identifier(EOTE.MOD_ID, "potted_explorers_fruit_block"), new FlowerPotBlock(EXPLORER_FRUIT_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
-    public static final Block ARTIFACT_GEODE = registerBlock("artifact_geode",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE).strength(2f), UniformIntProvider.create(2, 5)));
+    public static final Block ARTIFACT_GEODE = registerBlock("artifact_geode_block",
+            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(2f), UniformIntProvider.create(2, 5)));
 
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, block, new FabricItemSettings());

@@ -16,6 +16,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.EXPLORER_FRUIT_BLOCK, BlockLootTableGenerator.dropsWithShears(ModBlocks.EXPLORER_FRUIT_BLOCK, ItemEntry.builder(ModItems.EXPLORER_FRUIT)));
         addDrop(ModBlocks.POTTED_EXPLORER_FRUIT_BLOCK, ModBlocks.EXPLORER_FRUIT_BLOCK);
+        addDrop(ModBlocks.ARTIFACT_GEODE, BlockLootTableGenerator.dropsWithSilkTouch(ModBlocks.ARTIFACT_GEODE, ItemEntry.builder(ModItems.ARTIFACT_GEODE)));
     }
 
 }
