@@ -71,7 +71,7 @@ public class ArtifactGeode extends Item implements IArtifact {
         var resultStack = possibleRewards.get(r.nextInt(possibleRewards.size())).getDefaultStack();
 
         if (stack.isEmpty()) {
-            slot.setStack(resultStack);
+            slot.setStackNoCallbacks(resultStack);
         } else {
             player.giveItemStack(resultStack);
         }

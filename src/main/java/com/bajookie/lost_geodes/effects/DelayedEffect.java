@@ -1,16 +1,12 @@
 package com.bajookie.lost_geodes.effects;
 
-import com.bajookie.lost_geodes.EOTE;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import org.apache.logging.log4j.util.TriConsumer;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 public abstract class DelayedEffect extends StatusEffect implements IRemoveEffect {
     public DelayedEffect(StatusEffectCategory category) {
@@ -20,11 +16,6 @@ public abstract class DelayedEffect extends StatusEffect implements IRemoveEffec
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return false;
-    }
-
-    @Override
-    public void onRemoved(AttributeContainer attributeContainer) {
-        super.onRemoved(attributeContainer);
     }
 
     public static DelayedEffect create(StatusEffectCategory category, BiConsumer<StatusEffectInstance, LivingEntity> onRemoveConsumer) {
@@ -43,9 +34,9 @@ public abstract class DelayedEffect extends StatusEffect implements IRemoveEffec
             }
 
             @Override
-            public void onApplied(LivingEntity entity, int amplifier) {
+            public void onApplied(LivingEntity entity, AttributeContainer attributeContainer, int amplifier) {
                 onApplyConsumer.accept(entity,amplifier);
-                super.onApplied(entity, amplifier);
+                super.onApplied(entity, attributeContainer , amplifier);
             }
         };
     }

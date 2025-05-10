@@ -2,6 +2,7 @@ package com.bajookie.lost_geodes.effects;
 
 import com.bajookie.lost_geodes.particles.ModParticles;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -28,10 +29,10 @@ public class StarfallEffect extends StatusEffect {
     }
 
     @Override
-    public void onApplied(LivingEntity entity, int amplifier) {
+    public void onApplied(LivingEntity entity, AttributeContainer attributeContainer, int amplifier) {
         int duration = entity.getStatusEffect(ModEffects.STARFALL_EFFECT).getDuration();
 
-        super.onApplied(entity, amplifier);
+        super.onApplied(entity, attributeContainer, amplifier);
     }
 
     @Override

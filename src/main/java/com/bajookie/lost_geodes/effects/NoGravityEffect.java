@@ -17,7 +17,7 @@ public class NoGravityEffect extends StatusEffect implements IRemoveEffect {
         return false;
     }
     @Override
-    public void onApplied(LivingEntity entity, int amplifier) {
+    public void onApplied(LivingEntity entity, AttributeContainer attributeContainer, int amplifier) {
         if (entity.hasNoGravity()){
             entity.removeStatusEffect(this);
         } else {

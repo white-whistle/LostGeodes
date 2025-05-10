@@ -1,7 +1,9 @@
 package com.bajookie.lost_geodes.client.render;
 
+import com.bajookie.lost_geodes.EOTE;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -9,7 +11,7 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.item.ItemRenderer;
-import net.minecraft.client.util.SkinTextures;
+import net.minecraft.client.util.DefaultSkinHelper;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -60,7 +62,10 @@ public class CustomArmor implements ArmorRenderer {
 
     public static boolean isSlim(LivingEntity livingEntity) {
         if (livingEntity instanceof ClientPlayerEntity clientPlayerEntity) {
-            return clientPlayerEntity.getSkinTextures().model() == SkinTextures.Model.SLIM;
+
+            String string = clientPlayerEntity.getModel();
+
+            return string.equals("slim");
         }
 
         return false;

@@ -49,10 +49,10 @@ public class SlotUtil {
             return false;
         }
 
-        @Override
-        public boolean canBeHighlighted() {
-            return false;
-        }
+        // @Override
+        // public boolean canBeHighlighted() {
+        //     return false;
+        // }
 
         @Override
         public boolean isEnabled() {

@@ -77,7 +77,7 @@ public class PandorasBagScreenHandler extends ScreenHandler {
 
                         var next = RaidReward.dequeueItem(bag);
                         if (next != null) {
-                            setStack(next);
+                            setStackNoCallbacks(next);
                         }
 
                         var invNbt = ((SimpleInventory) inventory).toNbtList();
@@ -93,7 +93,7 @@ public class PandorasBagScreenHandler extends ScreenHandler {
 
                         var next = RaidReward.dequeueItem(bag);
                         if (next != null) {
-                            setStack(next);
+                            setStackNoCallbacks(next);
                         }
 
                         var invNbt = ((SimpleInventory) inventory).toNbtList();
@@ -127,7 +127,7 @@ public class PandorasBagScreenHandler extends ScreenHandler {
             }
             if (itemStack2.isEmpty()) {
                 var next = RaidReward.dequeueItem(bag);
-                slot2.setStack(next != null ? next : ItemStack.EMPTY);
+                slot2.setStackNoCallbacks(next != null ? next : ItemStack.EMPTY);
             } else {
                 slot2.markDirty();
             }

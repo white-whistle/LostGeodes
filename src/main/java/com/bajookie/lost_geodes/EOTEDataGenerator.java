@@ -3,7 +3,6 @@ package com.bajookie.lost_geodes;
 import com.bajookie.lost_geodes.datagen.ModModelProvider;
 import com.bajookie.lost_geodes.datagen.ModWorldGenerator;
 import com.bajookie.lost_geodes.util.ModLootTableProvider;
-import com.bajookie.lost_geodes.util.ModRecipeProvider;
 import com.bajookie.lost_geodes.world.ModConfiguredFeatures;
 import com.bajookie.lost_geodes.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -18,7 +17,6 @@ public class EOTEDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
-        pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModWorldGenerator::new);
     }
 

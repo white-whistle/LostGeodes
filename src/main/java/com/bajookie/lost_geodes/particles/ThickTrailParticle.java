@@ -26,7 +26,8 @@ public class ThickTrailParticle extends AnimatedParticle {
         }
         this.velocityY -= 0.04 * (double)this.gravityStrength;
         this.move(this.velocityX, this.velocityY, this.velocityZ);
-        if (this.ascending && this.y == this.prevPosY) {
+        // if (this.ascending && this.y == this.prevPosY) {
+        if (this.y == this.prevPosY) {
             this.velocityX *= 1.1;
             this.velocityZ *= 1.1;
         }
