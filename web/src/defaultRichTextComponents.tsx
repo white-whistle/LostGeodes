@@ -6,7 +6,7 @@ const ICON_TEST = (iconId: string) => (chunks: any) =>
 	(
 		<>
 			{hasIcon(iconId) && (
-				<MCGlyphIcon font={'echoes_of_the_elders:' + iconId} />
+				<MCGlyphIcon font={'lost_geodes:' + iconId} />
 			)}
 			<span style={{ color: MC_PALETTE[iconId.toLocaleLowerCase()] }}>
 				{chunks}

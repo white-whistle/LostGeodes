@@ -4,17 +4,17 @@ import { PixelScaling } from './PixelScaling';
 import styles from './MCGlyphIcon.module.css';
 
 const textures = import.meta.glob(
-	'../../../src/main/resources/assets/echoes_of_the_elders/textures/font/*.png',
+	'../../../src/main/resources/assets/lost_geodes/textures/font/*.png',
 	{ eager: true }
 );
 
 export function fontToImageSrc(font: string) {
-	const tex = font.replace('echoes_of_the_elders:', '');
+	const tex = font.replace('lost_geodes:', '');
 	// return '/font/' + tex + '.png';
 	// return `${basePath}/font/${tex}.png?raw=true`;
 	return (
 		textures[
-			`../../../src/main/resources/assets/echoes_of_the_elders/textures/font/${tex}.png`
+			`../../../src/main/resources/assets/lost_geodes/textures/font/${tex}.png`
 		] as any
 	).default;
 }

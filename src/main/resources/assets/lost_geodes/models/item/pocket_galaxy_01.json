@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lost_geodes:item/pocket_galaxy_01"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lost_geodes:active": 1
+      },
+      "model": "lost_geodes:item/pocket_galaxy_01_active"
+    }
+  ]
+}

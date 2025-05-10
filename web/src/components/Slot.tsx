@@ -8,7 +8,7 @@ import styles from './Slot.module.css';
 import { ITEM_SIZE } from './Item';
 import { ComponentProps } from 'react';
 import SlotBG from '../assets/texture/slot.png';
-import UberSlotBG from '../../../src/main/resources/assets/echoes_of_the_elders/textures/gui/sprites/widget/star_knob.png';
+import UberSlotBG from '../../../src/main/resources/assets/lost_geodes/textures/gui/sprites/widget/star_knob.png';
 
 export const SLOT_SIZE = 18;
 

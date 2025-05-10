@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "lost_geodes:block/totem_spawn_block_bottom",
+    "side": "lost_geodes:block/totem_spawn_block_side",
+    "top": "lost_geodes:block/totem_spawn_block_top"
+  }
+}

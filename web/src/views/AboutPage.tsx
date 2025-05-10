@@ -30,7 +30,7 @@ function AboutPage() {
 					<MCGuiTitle>Modpack Creators</MCGuiTitle>
 					<MCGuiText>
 						Feel free to include this mod in your modpack{' '}
-						<MCGlyphIcon font='echoes_of_the_elders:heart' />
+						<MCGlyphIcon font='lost_geodes:heart' />
 					</MCGuiText>
 				</Vertical>
 			</MCGui>

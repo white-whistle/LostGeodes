@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lost_geodes:item/reality_pick",
+    "layer1": "lost_geodes:item/reality_pick_overlay"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lost_geodes:stack_level": 1.0
+      },
+      "model": "lost_geodes:item/reality_pick_01"
+    }
+  ]
+}

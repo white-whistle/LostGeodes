@@ -1,0 +1,29 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lost_geodes:item/orb_of_lightning"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lost_geodes:ready": 1.0,
+        "lost_geodes:stack_level": 0.0
+      },
+      "model": "lost_geodes:item/orb_of_lightning_active"
+    },
+    {
+      "predicate": {
+        "lost_geodes:ready": 0.0,
+        "lost_geodes:stack_level": 1.0
+      },
+      "model": "lost_geodes:item/orb_of_lightning_01"
+    },
+    {
+      "predicate": {
+        "lost_geodes:ready": 1.0,
+        "lost_geodes:stack_level": 1.0
+      },
+      "model": "lost_geodes:item/orb_of_lightning_active_01"
+    }
+  ]
+}

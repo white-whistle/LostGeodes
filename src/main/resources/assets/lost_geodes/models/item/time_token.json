@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lost_geodes:item/time_token",
+    "layer1": "lost_geodes:item/time_token_overlay"
+  }
+}

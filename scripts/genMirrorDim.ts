@@ -1,13 +1,13 @@
 import { exit } from "process";
 import { promises as fs } from "fs";
 
-const MOD_ID = "echoes_of_the_elders"
+const MOD_ID = "lost_geodes"
 const MC_VERSION = "1.20.2"
 
 const settings = {
     output: `./src/main/resources/data/${MOD_ID}/dimension/defense_dim.json`,
 
-    ignoreBiomes: ["echoes_of_the_elders:lost_biome","echoes_of_the_elders:lost_river_biome","echoes_of_the_elders:lost_ocean_biome","echoes_of_the_elders:deep_lost_ocean_biome","echoes_of_the_elders:lost_beach_biome"
+    ignoreBiomes: ["lost_geodes:lost_biome","lost_geodes:lost_river_biome","lost_geodes:lost_ocean_biome","lost_geodes:deep_lost_ocean_biome","lost_geodes:lost_beach_biome"
         ],
 
     mapPresetBiomeToDimBiome(presetBiome: string) {

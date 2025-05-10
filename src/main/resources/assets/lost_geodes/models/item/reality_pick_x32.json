@@ -1,0 +1,7 @@
+{
+  "parent": "lost_geodes:item/handheld_32",
+  "textures": {
+    "layer0": "lost_geodes:item/reality_pick_x32",
+    "layer1": "lost_geodes:item/reality_pick_overlay_x32"
+  }
+}

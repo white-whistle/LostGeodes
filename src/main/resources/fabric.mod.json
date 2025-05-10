@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "echoes_of_the_elders",
+  "id": "lost_geodes",
   "version": "${version}",
-  "name": "EchoesOfTheElders",
-  "description": "Explore and uncover lost civilizations, collecting mystical relics imbued with powerful abilities and hidden lore.",
+  "name": "Lost Geodes",
+  "description": "Uncover buried artifacts of immense power.",
   "authors": [
     "LiorBuch",
     "2mer"
@@ -13,22 +13,22 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "MIT",
-  "icon": "assets/echoes_of_the_elders/icon.png",
+  "icon": "assets/lost_geodes/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.bajookie.echoes_of_the_elders.EOTE"
+      "com.bajookie.lost_geodes.EOTE"
     ],
     "client": [
-      "com.bajookie.echoes_of_the_elders.EOTEClient"
+      "com.bajookie.lost_geodes.EOTEClient"
     ],
     "fabric-datagen": [
-      "com.bajookie.echoes_of_the_elders.EOTEDataGenerator"
+      "com.bajookie.lost_geodes.EOTEDataGenerator"
     ]
   },
-  "accessWidener": "echoes_of_the_elders.accessWidener",
+  "accessWidener": "lost_geodes.accessWidener",
   "mixins": [
-    "echoes_of_the_elders.mixins.json"
+    "lost_geodes.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.24",

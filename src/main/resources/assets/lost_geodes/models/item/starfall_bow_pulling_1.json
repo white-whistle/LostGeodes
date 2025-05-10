@@ -1,0 +1,12 @@
+{
+  "parent": "lost_geodes:item/starfall_bow",
+  "textures": {
+    "layer0": "lost_geodes:item/starfall_bow_pulling_1"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [109.21, 3.25, 121.24],
+      "translation": [-3.5, -0.5, 2.25]
+    }
+  }
+}

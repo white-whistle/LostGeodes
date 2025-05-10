@@ -1,7 +1,7 @@
 import { MantineProvider, createTheme } from '@mantine/core';
 import { IntlProvider } from 'react-intl';
 
-import EN_US from '../../src/main/resources/assets/echoes_of_the_elders/lang/en_us.json';
+import EN_US from '../../src/main/resources/assets/lost_geodes/lang/en_us.json';
 import defaultRichTextComponents from './defaultRichTextComponents';
 import { PixelScaling } from './components/PixelScaling';
 import { Routes } from './Routes';

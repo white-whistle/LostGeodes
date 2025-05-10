@@ -1,0 +1,62 @@
+{
+  "spirit_entity_ambient": {
+    "subtitle": "sounds.echos_of_the_elders.spirit_entity_ambient",
+    "sounds": [
+      "lost_geodes:spirit_entity_ambient"
+    ]
+  },
+  "spirit_entity_death": {
+    "subtitle": "sounds.echos_of_the_elders.spirit_entity_death",
+    "sounds": [
+      "lost_geodes:spirit_entity_death"
+    ]
+  },
+  "spirit_entity_hurt": {
+    "subtitle": "sounds.echos_of_the_elders.spirit_entity_hurt",
+    "sounds": [
+      "lost_geodes:spirit_entity_hurt"
+    ]
+  },
+  "electric_sound": {
+    "subtitle": "sounds.echos_of_the_elders.electric_sound",
+    "sounds": [
+      "lost_geodes:electric_sound"
+    ]
+  },
+  "minigun_charge": {
+    "subtitle": "sounds.echos_of_the_elders.minigun_charge",
+    "sounds": [
+      "lost_geodes:minigun_charge"
+    ]
+  },
+  "minigun_fire": {
+    "subtitle": "sounds.echos_of_the_elders.minigun_fire",
+    "sounds": [
+      "lost_geodes:minigun_fire"
+    ]
+  },
+  "minigun_fire2": {
+    "subtitle": "sounds.echos_of_the_elders.minigun_fire2",
+    "sounds": [
+      "lost_geodes:minigun_fire2"
+    ]
+  },
+  "minigun_end": {
+    "subtitle": "sounds.echos_of_the_elders.minigun_end",
+    "sounds": [
+      "lost_geodes:minigun_end"
+    ]
+  },
+  "gun_shot_01": {
+    "subtitle": "sounds.echos_of_the_elders.gun_shot_01",
+    "sounds": [
+      "lost_geodes:gun_shot_01"
+    ]
+  },
+  "zephyr_sound": {
+    "subtitle": "sounds.echos_of_the_elders.zephyr_sound",
+    "sounds": [
+      "lost_geodes:zephyr_sound"
+    ]
+  }
+}

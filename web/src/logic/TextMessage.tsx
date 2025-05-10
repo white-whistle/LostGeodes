@@ -33,9 +33,9 @@ export function textMessageToFmsg(msg: TextMessage) {
 		}
 
 		if (TextMessage.isMC(msg)) {
-			if (msg.translate === 'number.echoes_of_the_elders.int')
+			if (msg.translate === 'number.lost_geodes.int')
 				return msg.with[0] as number;
-			if (msg.translate === 'number.echoes_of_the_elders.f1')
+			if (msg.translate === 'number.lost_geodes.f1')
 				return Number(msg.with[0]).toFixed(1);
 			// technically we cant support this really and should shift to using eote messages instead where possible
 			return <FormattedMessage id={msg.translate} values={{}} />;
@@ -45,7 +45,7 @@ export function textMessageToFmsg(msg: TextMessage) {
 			const values = eoteArgsToValues(msg.with);
 			return (
 				<FormattedMessage
-					id={msg['echoes_of_the_elders:translate']}
+					id={msg['lost_geodes:translate']}
 					values={values}
 				/>
 			);
@@ -68,7 +68,7 @@ export function textMessageIdentifier(msg: TextMessage) {
 	}
 
 	if (TextMessage.isEOTE(msg)) {
-		return msg['echoes_of_the_elders:translate'];
+		return msg['lost_geodes:translate'];
 	}
 
 	return null;

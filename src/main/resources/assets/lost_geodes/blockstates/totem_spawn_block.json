@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lost_geodes:block/totem_spawn_block"
+    }
+  }
+}

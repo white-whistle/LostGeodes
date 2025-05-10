@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lost_geodes:block/artifact_geode_block"
+    }
+  }
+}

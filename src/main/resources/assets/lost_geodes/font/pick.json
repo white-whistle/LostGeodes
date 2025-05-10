@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "lost_geodes:font/pick.png",
+      "ascent": 8,
+      "height": 9,
+      "chars": [
+        "@"
+      ]
+    }
+  ]
+}

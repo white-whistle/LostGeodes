@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "lost_geodes:block/tent_wool_door_bottom_open",
+    "top": "lost_geodes:block/tent_wool_door_top_open"
+  }
+}

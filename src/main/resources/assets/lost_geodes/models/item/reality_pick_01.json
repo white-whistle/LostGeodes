@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lost_geodes:item/reality_pick_01",
+    "layer1": "lost_geodes:item/reality_pick_overlay_01"
+  }
+}

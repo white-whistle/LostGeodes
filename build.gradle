@@ -18,7 +18,7 @@ repositories {
     // for more information about repositories.
 }
 loom {
-    accessWidenerPath = file("src/main/resources/echoes_of_the_elders.accessWidener")
+    accessWidenerPath = file("src/main/resources/lost_geodes.accessWidener")
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
         datagen {
@@ -26,7 +26,7 @@ loom {
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=echoes_of_the_elders"
+            vmArg "-Dfabric-api.datagen.modid=lost_geodes"
 
             runDir "build/datagen"
         }

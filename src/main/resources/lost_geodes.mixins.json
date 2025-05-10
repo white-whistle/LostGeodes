@@ -1,0 +1,55 @@
+{
+  "required": true,
+  "package": "com.bajookie.lost_geodes.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractBlockMixin",
+    "DamageTypesMixin",
+    "EntityMixin",
+    "IgnoreProjectileMixin",
+    "ItemCooldownManagerAccessor",
+    "ItemCooldownManagerEntryAccessor",
+    "ItemCooldownManagerMixin",
+    "ItemEntityMixin",
+    "ItemStackMixin",
+    "LivingEntityAccessor",
+    "LivingEntityCapabilityMixin",
+    "LivingEntityMixin",
+    "MobEntityAccessor",
+    "PersistentProjectileEntityMixin",
+    "PlayerEntityMixin",
+    "PlayerManagerMixin",
+    "PotionUseMixin",
+    "ServerPlayerEntityMixin",
+    "ServerPlayerInteractionManagerMixin",
+    "ServerWorldAccessor",
+    "SplashPotionUseMixin",
+    "TextSerializerMixin",
+    "ThrownItemEntityAccessor",
+    "TrunkPlacerTypeInvoker"
+  ],
+  "client": [
+    "BuiltinModelItemRendererAccessor",
+    "BuiltinModelItemRendererMixin",
+    "ClientItemMixin",
+    "ClientPlayerEntityMixin",
+    "ClientWorldAccessor",
+    "DrawContextMixin",
+    "GameRendererMixin",
+    "HandledScreenAccessor",
+    "HeldItemRendererMixin",
+    "ItemRendererAccessor",
+    "ItemRendererMixin",
+    "LivingEntityRendererMixin",
+    "MinecraftClientMixin",
+    "ModelLoaderMixin",
+    "TooltipComponentMixin",
+    "WorldRendererMixin"
+  ],
+  "server": [
+    "ServerItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

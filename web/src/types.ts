@@ -13,7 +13,7 @@ export type MCTextMessage = TextMessageBase & {
 }
 
 export type EOTETextMessage = TextMessageBase & {
-	"echoes_of_the_elders:translate": string,
+	"lost_geodes:translate": string,
 	with: EOTEArgs;
 }
 
@@ -27,7 +27,7 @@ export const TextMessage = {
 	},
 
 	isEOTE(msg: TextMessage): msg is EOTETextMessage {
-		return 'echoes_of_the_elders:translate' in msg
+		return 'lost_geodes:translate' in msg
 	},
 
 	isPlain(msg: TextMessage): msg is PlainTextMessage {

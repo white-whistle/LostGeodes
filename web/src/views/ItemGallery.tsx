@@ -156,7 +156,7 @@ export const ItemGallery = () => {
 				}
 			>
 				<MCGlyphIcon
-					font='echoes_of_the_elders:info'
+					font='lost_geodes:info'
 					mr={scaling * 6}
 				/>
 			</MCTooltip>

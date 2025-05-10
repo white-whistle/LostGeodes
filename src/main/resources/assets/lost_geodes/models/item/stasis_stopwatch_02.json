@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lost_geodes:item/stasis_stopwatch_02"
+  }
+}

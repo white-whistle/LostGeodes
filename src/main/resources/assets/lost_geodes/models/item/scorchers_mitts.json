@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lost_geodes:item/scorchers_mitts"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lost_geodes:stack_level": 1
+      },
+      "model": "lost_geodes:item/scorchers_mitts_01"
+    }
+  ]
+}

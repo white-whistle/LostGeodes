@@ -5,20 +5,20 @@ import { forwardRef } from 'react';
 import MissingTexture from '../assets/texture/missing.png';
 
 const textures = import.meta.glob(
-	'../../../src/main/resources/assets/echoes_of_the_elders/textures/item/*.png',
+	'../../../src/main/resources/assets/lost_geodes/textures/item/*.png',
 	{ eager: true }
 );
 
 export function textureFromItem(item: string) {
 	return (
 		textures[
-			`../../../src/main/resources/assets/echoes_of_the_elders/textures/item/${item}.png`
+			`../../../src/main/resources/assets/lost_geodes/textures/item/${item}.png`
 		] as any
 	).default;
 }
 
 export function itemToKey(item: string) {
-	return `item.echoes_of_the_elders.${item}`;
+	return `item.lost_geodes.${item}`;
 }
 
 export const ITEM_SIZE = 16;

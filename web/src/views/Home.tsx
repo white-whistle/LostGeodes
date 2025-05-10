@@ -138,7 +138,7 @@ export const Home = () => {
 						<MCGuiTitle>Love our work?</MCGuiTitle>
 						<MCGuiText>
 							Star us on github!
-							<MCGlyphIcon font='echoes_of_the_elders:star' />
+							<MCGlyphIcon font='lost_geodes:star' />
 						</MCGuiText>
 						<MCGuiText />
 						<Horizontal>

@@ -1,0 +1,50 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lost_geodes:item/stasis_stopwatch"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.125
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_01"
+    },
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.25
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_02"
+    },
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.375
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_03"
+    },
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.5
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_04"
+    },
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.625
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_05"
+    },
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.75
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_06"
+    },
+    {
+      "predicate": {
+        "lost_geodes:tok": 0.875
+      },
+      "model": "lost_geodes:item/stasis_stopwatch_07"
+    }
+  ]
+}
