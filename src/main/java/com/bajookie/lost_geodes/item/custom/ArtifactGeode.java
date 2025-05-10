@@ -80,7 +80,7 @@ public class ArtifactGeode extends Item implements IArtifact {
     }
 
     public void success(PlayerEntity user, ItemStack self, ItemStack other) {
-        user.playSound(SoundEvents.BLOCK_SMITHING_TABLE_USE, 0.8f, 0.8f + user.getWorld().getRandom().nextFloat() * 0.4f);
+        user.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, 0.8f, 0.8f + user.getWorld().getRandom().nextFloat() * 0.4f);
 
         Interator.of(20).forEach(i -> {
             ScreenParticleManager.addParticle(
