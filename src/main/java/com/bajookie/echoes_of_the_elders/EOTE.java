@@ -2,7 +2,6 @@ package com.bajookie.echoes_of_the_elders;
 
 import com.bajookie.echoes_of_the_elders.block.ModBlocks;
 import com.bajookie.echoes_of_the_elders.block.custom.entity.ModBlockEntities;
-import com.bajookie.echoes_of_the_elders.command.ModCommands;
 import com.bajookie.echoes_of_the_elders.effects.ModEffects;
 import com.bajookie.echoes_of_the_elders.entity.ModEntities;
 import com.bajookie.echoes_of_the_elders.item.ModFuelItems;
@@ -14,7 +13,6 @@ import com.bajookie.echoes_of_the_elders.screen.ModScreenHandlerTypes;
 import com.bajookie.echoes_of_the_elders.sound.ModSounds;
 import com.bajookie.echoes_of_the_elders.util.ModLootTablesModifiers;
 import com.bajookie.echoes_of_the_elders.world.gen.ModWorldGeneration;
-import com.bajookie.echoes_of_the_elders.world.tree.ModTrunkPlacerTypes;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -37,19 +35,15 @@ public class EOTE implements ModInitializer {
         ModEntities.registerMobAttributes();
         ModParticles.registerParticles();
         ModSounds.registerSounds();
-        ModTrunkPlacerTypes.register();
         ModBlockEntities.registerBlockEntities();
         ModEntities.registerMobAttributes();
         ModParticles.registerParticles();
         ModSounds.registerSounds();
-        ModTrunkPlacerTypes.register();
         ServerNetworking.init();
         ModScreenHandlerTypes.init();
         ModFuelItems.init();
 
         DropCondition.init();
-
-        ModCommands.init();
     }
 
 

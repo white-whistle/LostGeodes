@@ -6,7 +6,6 @@ import com.bajookie.echoes_of_the_elders.util.ModIdentifier;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.Frustum;
-import net.minecraft.client.render.entity.ArrowEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
@@ -16,13 +15,7 @@ import net.minecraft.util.Identifier;
 import static com.bajookie.echoes_of_the_elders.EOTE.MOD_ID;
 
 public class ModModelLayers {
-    public static final EntityModelLayer RAID_TOTEM_LAYER =
-            new EntityModelLayer(new Identifier(MOD_ID, "flower_defense_entity"), "main");
-    public static final EntityModelLayer SPIRIT_ENTITY_LAYER =
-            new EntityModelLayer(new Identifier(MOD_ID, "spirit_entity"), "main");
 
-    public static final EntityModelLayer ELDERMAN_ENTITY_LAYER = new EntityModelLayer(new ModIdentifier("elderman_entity"), "main");
-    public static final EntityModelLayer ZOMBEE_ENTITY_LAYER = new EntityModelLayer(new ModIdentifier("zombee_entity"), "main");
     public static final EntityModelLayer MAGMA_BULLET_LAYER = new EntityModelLayer(new ModIdentifier("magma_bullet_entity"), "main");
     public static final EntityModelLayer HAT_BRIM = new EntityModelLayer(new ModIdentifier("hat_brim"), "main");
     public static final EntityModelLayer HALO_LAYER = new EntityModelLayer(new ModIdentifier("halo"), "main");
@@ -49,14 +42,8 @@ public class ModModelLayers {
      * Register Model Layers here:
      */
     public static void registerModMobLayers() {
-        EntityModelLayerRegistry.registerModelLayer(RAID_TOTEM_LAYER, RaidTotemModel::getTexturedModelData);
-        EntityModelLayerRegistry.registerModelLayer(SPIRIT_ENTITY_LAYER, SpiritItemEntityModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(MAGMA_BULLET_LAYER, MagmaBulletModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(PELLET_PROJECTILE_LAYER, PelletProjectileModel::getTexturedModelData);
-        EntityModelLayerRegistry.registerModelLayer(ELDERMAN_ENTITY_LAYER, EldermanModel::getTexturedModelData);
-
-        EntityModelLayerRegistry.registerModelLayer(ZOMBEE_ENTITY_LAYER, ZomBeeModel::getTexturedModelData);
-        EntityRendererRegistry.register(ModEntities.ZOMBEE_ENTITY_TYPE, ZomBeeRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(MONOLOOK_LAYER, MonolookEntityModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.MONOLOOK_ENTITY_TYPE, MonolookEntityRenderer::new);

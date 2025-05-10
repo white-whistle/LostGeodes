@@ -6,7 +6,6 @@ import com.bajookie.echoes_of_the_elders.item.ModItems;
 import com.bajookie.echoes_of_the_elders.item.custom.AtlasGreaves;
 import com.bajookie.echoes_of_the_elders.item.custom.HareleapStriders;
 import com.bajookie.echoes_of_the_elders.item.custom.SteppingStone;
-import com.bajookie.echoes_of_the_elders.system.Capability.ModCapabilities;
 import com.bajookie.echoes_of_the_elders.system.ItemStack.StackLevel;
 import com.bajookie.echoes_of_the_elders.util.InventoryUtil;
 import net.minecraft.entity.Entity;
@@ -45,22 +44,6 @@ public abstract class LivingEntityMixin extends Entity {
             if (effect.getEffectType() instanceof IRemoveEffect iRemoveEffect) {
                 iRemoveEffect.onRemoved(effect, entity);
             }
-        }
-    }
-
-    @Inject(method = "shouldDropLoot", at = @At("HEAD"), cancellable = true)
-    private void shouldDropLoot(CallbackInfoReturnable<Boolean> cir) {
-        var self = (LivingEntity) (Object) this;
-        if (ModCapabilities.RAID_ENEMY.hasCapability(self)) {
-            cir.setReturnValue(false);
-        }
-    }
-
-    @Inject(method = "shouldDropXp", at = @At("HEAD"), cancellable = true)
-    private void shouldDropXP(CallbackInfoReturnable<Boolean> cir) {
-        var self = (LivingEntity) (Object) this;
-        if (ModCapabilities.RAID_ENEMY.hasCapability(self)) {
-            cir.setReturnValue(false);
         }
     }
 

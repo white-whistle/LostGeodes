@@ -4,7 +4,6 @@ import com.bajookie.echoes_of_the_elders.effects.ModEffects;
 import com.bajookie.echoes_of_the_elders.entity.ModEntities;
 import com.bajookie.echoes_of_the_elders.item.custom.OrbOfLightning;
 import com.bajookie.echoes_of_the_elders.mixin.ThrownItemEntityAccessor;
-import com.bajookie.echoes_of_the_elders.system.Capability.ModCapabilities;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -74,7 +73,6 @@ public class OrbOfLightningProjectileEntity extends ThrownItemEntity {
             int amp = OrbOfLightning.LIGHTNING_STRIKES.get(this.getItem());
             for (LivingEntity entity : entities) {
                 if (entity instanceof PlayerEntity) continue;
-                if (ModCapabilities.RAID_OBJECTIVE.hasCapability(entity)) continue;
                 if (this.getOwner() instanceof LivingEntity living) {
                     entity.setAttacker(living);
                 }

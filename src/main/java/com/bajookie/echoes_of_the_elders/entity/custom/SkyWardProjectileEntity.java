@@ -2,6 +2,7 @@ package com.bajookie.echoes_of_the_elders.entity.custom;
 
 import com.bajookie.echoes_of_the_elders.entity.ModEntities;
 import com.bajookie.echoes_of_the_elders.item.ModItems;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.FlyingItemEntity;
@@ -17,8 +18,12 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
+import net.minecraft.world.explosion.ExplosionBehavior;
 
 public class SkyWardProjectileEntity extends ProjectileEntity implements FlyingItemEntity {
     private final float maxPull;
@@ -27,6 +32,12 @@ public class SkyWardProjectileEntity extends ProjectileEntity implements FlyingI
     private final int currentCount;
     private static final TrackedData<Integer> TARGET_ID = DataTracker.registerData(SkyWardProjectileEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
+    private static final ExplosionBehavior EXPLOSION_BEHAVIOR = new ExplosionBehavior() {
+        @Override
+        public boolean canDestroyBlock(Explosion explosion, BlockView world, BlockPos pos, BlockState state, float power) {
+            return false;
+        }
+    };
 
     public SkyWardProjectileEntity(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
@@ -75,11 +86,11 @@ public class SkyWardProjectileEntity extends ProjectileEntity implements FlyingI
                             ((ServerWorld) world).spawnParticles(ParticleTypes.SMOKE, this.getX(), this.getY(), this.getZ(), 1, 0, 0, 0, 0);
                         }
                     }
-                    if (this.isMaxed) {
+                    // if (this.isMaxed) {
                         predictHoming(livingEntity);
-                    } else {
-                        simpleHoming(livingEntity);
-                    }
+                    // } else {
+                    //     simpleHoming(livingEntity);
+                    // }
 
                 } else {
                     this.discard();
@@ -121,7 +132,7 @@ public class SkyWardProjectileEntity extends ProjectileEntity implements FlyingI
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         if (!entityHitResult.getEntity().getWorld().isClient) {
-            entityHitResult.getEntity().getWorld().createExplosion(null, entityHitResult.getPos().x, entityHitResult.getPos().y, entityHitResult.getPos().z, 3, false, World.ExplosionSourceType.MOB);
+            entityHitResult.getEntity().getWorld().createExplosion(null, null, EXPLOSION_BEHAVIOR, entityHitResult.getPos().x, entityHitResult.getPos().y, entityHitResult.getPos().z, 3, false, World.ExplosionSourceType.MOB);
             this.discard();
         }
         super.onEntityHit(entityHitResult);

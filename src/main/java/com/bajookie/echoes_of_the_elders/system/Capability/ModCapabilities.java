@@ -1,7 +1,5 @@
 package com.bajookie.echoes_of_the_elders.system.Capability;
 
-import com.bajookie.echoes_of_the_elders.system.Raid.RaidEnemyCapability;
-import com.bajookie.echoes_of_the_elders.system.Raid.RaidObjectiveCapability;
 import com.bajookie.echoes_of_the_elders.system.Raid.networking.s2c.SyncSingleCapability;
 import com.bajookie.echoes_of_the_elders.system.screen_switch.ScreenSwitchCapability;
 import com.bajookie.echoes_of_the_elders.util.ModIdentifier;
@@ -19,8 +17,6 @@ import java.util.function.Function;
 public class ModCapabilities {
     public static Map<String, Function<Object, Capability<?>>> lookup = new HashMap<>();
 
-    public static CapabilityWrapper<LivingEntity, RaidEnemyCapability> RAID_ENEMY = registerCapability("raid_enemy", RaidEnemyCapability::new);
-    public static CapabilityWrapper<LivingEntity, RaidObjectiveCapability> RAID_OBJECTIVE = registerCapability("raid_objective", RaidObjectiveCapability::new);
     public static CapabilityWrapper<LivingEntity, ScreenSwitchCapability> SCREEN_SWITCH_OBJECTIVE = registerCapability("tv_arrow_objective", ScreenSwitchCapability::new);
     public static CapabilityWrapper<PlayerEntity, PersistentCooldownCapability> PERSISTENT_COOLDOWN = registerCapability("persistent_cooldown", PersistentCooldownCapability::new);
 

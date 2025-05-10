@@ -5,7 +5,6 @@ import com.bajookie.echoes_of_the_elders.block.ModBlocks;
 import com.bajookie.echoes_of_the_elders.item.custom.IArtifact;
 import com.bajookie.echoes_of_the_elders.item.custom.IStackPredicate;
 import com.bajookie.echoes_of_the_elders.system.ItemStack.StackLevel;
-import com.bajookie.echoes_of_the_elders.system.ItemStack.Tier;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -20,28 +19,9 @@ import static com.bajookie.echoes_of_the_elders.EOTE.MOD_ID;
 @SuppressWarnings("unused")
 public class ModItemGroups {
     public static final ItemGroup MOD_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "mod_item_group"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.echoes_of_the_elders")).icon(() -> new ItemStack(ModBlocks.MINERS_FRUIT_BLOCK)).entries((displayContext, entries) -> {
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.echoes_of_the_elders")).icon(() -> new ItemStack(ModBlocks.ARTIFACT_GEODE)).entries((displayContext, entries) -> {
                 entries.add(ModItems.EXPLORER_FRUIT);
                 entries.add(ModBlocks.EXPLORER_FRUIT_BLOCK);
-                entries.add(ModBlocks.MINERS_FRUIT_BLOCK);
-                entries.add(ModBlocks.NETHER_FRUIT_BLOCK);
-                entries.add(ModBlocks.ARTIFACT_VAULT);
-                entries.add(ModBlocks.ANCIENT_TREE_SAPLING);
-                entries.add(ModItems.OLD_KEY);
-                entries.add(ModItems.CORRUPTED_KEY);
-                entries.add(ModBlocks.SPIRITAL_GRASS);
-                // entries.add(ModItems.RAID_DEBUG_ITEM);
-                entries.add(ModBlocks.WOOL_TENT_DOOR);
-                entries.add(ModItems.SPIRIT_SPAWN_EGG);
-                entries.add(ModItems.RAID_TOTEM_EGG);
-                entries.add(ModItems.ELDERMAN_SPAWN_EGG);
-                entries.add(ModItems.ZOMBEE_SPAWN_EGG);
-                entries.add(ModBlocks.TOTEM_SPAWN_BLOCK);
-                entries.add(Tier.set(new ItemStack(ModItems.OLD_KEY), 1), ItemGroup.StackVisibility.SEARCH_TAB_ONLY);
-                entries.add(Tier.set(new ItemStack(ModItems.OLD_KEY), 5), ItemGroup.StackVisibility.SEARCH_TAB_ONLY);
-                entries.add(Tier.set(new ItemStack(ModItems.OLD_KEY), 10), ItemGroup.StackVisibility.SEARCH_TAB_ONLY);
-                entries.add(Tier.set(new ItemStack(ModItems.OLD_KEY), 28), ItemGroup.StackVisibility.SEARCH_TAB_ONLY);
-                entries.add(Tier.set(new ItemStack(ModItems.OLD_KEY), 100), ItemGroup.StackVisibility.SEARCH_TAB_ONLY);
                 entries.add(ModItems.GALE_ARROW);
             }).build());
 
@@ -73,7 +53,6 @@ public class ModItemGroups {
                 addStackedVariants(entries, ModItems.REALITY_PICK);
                 addStackedVariants(entries, ModItems.GODSLAYER);
                 addStackedVariants(entries, ModItems.GUNHEELS);
-                addStackedVariants(entries, ModItems.ELDER_PRISM);
                 // addStackedVariants(entries, ModItems.STAT_FRUIT_HP);
                 addStackedVariants(entries, ModItems.TIME_GLYPH);
                 addStackedVariants(entries, ModItems.WTF_TOKEN);

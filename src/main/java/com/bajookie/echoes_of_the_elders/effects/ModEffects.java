@@ -4,8 +4,6 @@ import com.bajookie.echoes_of_the_elders.EOTE;
 import com.bajookie.echoes_of_the_elders.item.custom.SparkingMitts;
 import com.bajookie.echoes_of_the_elders.particles.ModParticles;
 import com.bajookie.echoes_of_the_elders.sound.ModSounds;
-import com.bajookie.echoes_of_the_elders.system.Capability.ModCapabilities;
-import com.bajookie.echoes_of_the_elders.system.Raid.RaidObjectiveCapability;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -56,17 +54,6 @@ public class ModEffects {
         }
     }));
 
-    public static final StatusEffect RAID_OBJECTIVE_START_COOLDOWN = registerStatusEffect("raid_objective_start_cooldown", DelayedEffect.create(StatusEffectCategory.NEUTRAL, (instance, entity) -> {
-        ModCapabilities.RAID_OBJECTIVE.use(entity, RaidObjectiveCapability::begin);
-    }));
-
-    public static final StatusEffect RAID_OBJECTIVE_VICTORY_PHASE = registerStatusEffect("raid_objective_victory_phase", DelayedEffect.create(StatusEffectCategory.NEUTRAL, (instance, entity) -> {
-        ModCapabilities.RAID_OBJECTIVE.use(entity, RaidObjectiveCapability::onVictory);
-    }));
-
-    public static final StatusEffect RAID_OBJECTIVE_CONTINUE_PHASE = registerStatusEffect("raid_objective_continue_phase", DelayedEffect.create(StatusEffectCategory.NEUTRAL, (instance, entity) -> {
-        ModCapabilities.RAID_OBJECTIVE.use(entity, RaidObjectiveCapability::advance);
-    }));
     public static final StatusEffect SHOCK_EFFECT = registerStatusEffect("shock_effect", new ShockEffect());
     public static final StatusEffect ELECTRIC_STUN_EFFECT = registerStatusEffect("electric_stun", new ElectricStunEffect());
     public static final StatusEffect NO_GRAVITY_EFFECT = registerStatusEffect("no_gravity_effect", new NoGravityEffect());

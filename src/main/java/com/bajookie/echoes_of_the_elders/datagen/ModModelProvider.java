@@ -26,15 +26,15 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerTintableCross(ModBlocks.NETHER_FRUIT_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
+        // blockStateModelGenerator.registerTintableCross(ModBlocks.NETHER_FRUIT_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.EXPLORER_FRUIT_BLOCK, ModBlocks.POTTED_EXPLORER_FRUIT_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MINERS_FRUIT_BLOCK, ModBlocks.POTTED_MINERS_FRUIT_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
+        // blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MINERS_FRUIT_BLOCK, ModBlocks.POTTED_MINERS_FRUIT_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
         // blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ELDER_LILY_FLOWER, ModBlocks.POTTED_ELDER_LILY_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.SPIRITAL_GRASS, BlockStateModelGenerator.TintType.TINTED);
+        // blockStateModelGenerator.registerTintableCross(ModBlocks.SPIRITAL_GRASS, BlockStateModelGenerator.TintType.TINTED);
         // blockStateModelGenerator.registerFlowerbed(ModBlocks.SPIRIT_PETALS);
         // blockStateModelGenerator.registerPlantPart();
         // blockStateModelGenerator.registerSimpleState(ModBlocks.BEAR_TRAP_BLOCK);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.ARTIFACT_VAULT);
+        // blockStateModelGenerator.registerSimpleState(ModBlocks.ARTIFACT_VAULT);
         // blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUN_RUNE_BLOCK);
         // blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MOSSY_STONE);
         // Wood

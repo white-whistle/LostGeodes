@@ -3,7 +3,6 @@ package com.bajookie.echoes_of_the_elders.entity.custom;
 import com.bajookie.echoes_of_the_elders.effects.ModEffects;
 import com.bajookie.echoes_of_the_elders.entity.ModEntities;
 import com.bajookie.echoes_of_the_elders.particles.ModParticles;
-import com.bajookie.echoes_of_the_elders.system.Capability.ModCapabilities;
 import com.bajookie.echoes_of_the_elders.util.VectorUtil;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -71,7 +70,6 @@ public class StarArrowProjectile extends ArrowEntity {
             Random r = new Random();
             for (LivingEntity entity : entities) {
                 if (entity instanceof PlayerEntity) continue;
-                if (ModCapabilities.RAID_OBJECTIVE.hasCapability(entity)) continue;
                 if (this.getOwner() instanceof LivingEntity living) {
                     entity.setAttacker(living);
                 }

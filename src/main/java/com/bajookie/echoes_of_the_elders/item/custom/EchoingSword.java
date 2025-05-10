@@ -14,6 +14,8 @@ import com.google.common.collect.Multimap;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.data.client.Model;
+import net.minecraft.data.client.Models;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -66,6 +68,11 @@ public class EchoingSword extends SwordItem implements IArtifact, IStackPredicat
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
         return true;
+    }
+
+    @Override
+    public Model getBaseModel() {
+        return Models.HANDHELD;
     }
 
     @Override

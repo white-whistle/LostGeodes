@@ -11,7 +11,6 @@ import com.bajookie.echoes_of_the_elders.entity.client.ModEntityRenderers;
 import com.bajookie.echoes_of_the_elders.entity.client.ModModelLayers;
 import com.bajookie.echoes_of_the_elders.events.PlayerAttackHandler;
 import com.bajookie.echoes_of_the_elders.particles.*;
-import com.bajookie.echoes_of_the_elders.screen.client.ModHandledScreens;
 import com.bajookie.echoes_of_the_elders.screen.client.particles.ScreenParticleManager;
 import com.bajookie.echoes_of_the_elders.util.ModModelPredicateProvider;
 import com.bajookie.echoes_of_the_elders.util.sided.ShiftingUtil;
@@ -57,7 +56,6 @@ public class EOTEClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.LINE_PARTICLE_TYPE, LineParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.ZAP_PARTICLE_TYPE, ZapParticle.Factory::new);
         HudRenderCallback.EVENT.register(new StopwatchOverlay());
-        HudRenderCallback.EVENT.register(new RaidObjectiveHoverOverlay());
         HudRenderCallback.EVENT.register(new TvArrowOverlay());
         HudRenderCallback.EVENT.register(new EquipmentCooldownOverlay());
 
@@ -69,12 +67,10 @@ public class EOTEClient implements ClientModInitializer {
             return null;
         });
 
-        // DimensionRenderingRegistryImpl.registerSkyRenderer(ModDimensions.DEFENSE_DIM_LEVEL_KEY,new ModSkyRenderer());
         CustomItemColors.init();
         ClientNetworking.init();
         AttackEntityCallback.EVENT.register(new PlayerAttackHandler());
 
-        ModHandledScreens.init();
         ModKeyBindings.init();
     }
 }
